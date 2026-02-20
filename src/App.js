@@ -1,4 +1,5 @@
 import './App.css';
+import Controller from './component/Controller';
 import Viewer from './component/Viewer';
 
 function App() {
@@ -7,6 +8,9 @@ function App() {
     <section>
       <Viewer />
     </section>
-  </div>;
+    <section>
+      <Controller />
+    </section>
+  </div>
 }
 export default App;
