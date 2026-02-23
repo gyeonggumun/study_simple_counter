@@ -1,11 +1,4 @@
-import { useState } from "react";
-
-const Controller = () => {
-    const [count, setCount] = useState(0);
-    const handleSetCount = (value) => {
-        setCount(count + value);
-    };
-
+const Controller = ({handleSetCount}) => {
     return (
         <div>
             <button onClick={()=> handleSetCount(-1)}>-1</button>
