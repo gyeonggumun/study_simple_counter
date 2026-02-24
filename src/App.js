@@ -15,8 +15,8 @@ function App() {
   }
 
   useEffect(() => {
-    console.log("count 업데이트: ", count);
-  }, [count]);
+    console.log("count 업데이트: ", text, count);
+  }, [count, text]);
 
   return <div className="App">
     <h1>Simple Counter</h1>
