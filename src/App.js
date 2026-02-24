@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import Controller from './component/Controller';
 import Viewer from './component/Viewer';
@@ -6,6 +6,8 @@ import Viewer from './component/Viewer';
 function App() {
   const [count, setCount] = useState(0);
   const [text, setText] = useState("");
+
+  const didMountRef = useRef(false);
 
   const handleSetCount = (value) => {
     setCount(count + value);
@@ -15,7 +17,12 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("컴포넌트 업데이트");
+    if (!didMountRef.current) {
+      didMountRef.current = true;
+      return;
+    } else {
+      console.log("컴포넌트 업데이트");
+    }
   });
 
   return <div className="App">
