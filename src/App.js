@@ -12,11 +12,11 @@ function App() {
   };
   const handleChangeText = (e) => {
     setText(e.target.value);
-  }
+  };
 
   useEffect(() => {
-    console.log("count 업데이트: ", text, count);
-  }, [count, text]);
+    console.log("컴포넌트 업데이트");
+  });
 
   return <div className="App">
     <h1>Simple Counter</h1>
