@@ -29,6 +29,12 @@ function App() {
     console.log("컴포넌트 마운트");
   },[]);
 
+  useEffect(() => {
+    setInterval(() => {
+      console.log("깜빡");
+    }, 1000);
+  });
+
   return <div className="App">
     <h1>Simple Counter</h1>
     <section>
